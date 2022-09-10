@@ -1,14 +1,18 @@
 package com.example.homeworkthree.services;
 
+import com.example.homeworkthree.dtos.AddPersonDto;
+import com.example.homeworkthree.dtos.CreatePersonDto;
+import com.example.homeworkthree.dtos.UpdatePersonDto;
+import com.example.homeworkthree.exceptions.NotFoundException;
 import com.example.homeworkthree.model.Person;
 
 import java.util.Collection;
 
 
 public interface PersonService {
-    String createPerson(Person person);
+    String addPerson(AddPersonDto personDTO);
 
-    Person getPersonById(Integer id);
+    Person getPersonById(Integer id) throws NotFoundException;
 
     String removePersonById(Integer id) throws NotFoundException;
 
