@@ -1,6 +1,6 @@
 package com.example.homeworkthree.repositories;
 
-import com.example.homeworkthree.model.Person;
+import com.example.homeworkthree.models.Person;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
 

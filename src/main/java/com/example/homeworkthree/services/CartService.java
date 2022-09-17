@@ -1,21 +1,23 @@
 package com.example.homeworkthree.services;
 
 import com.example.homeworkthree.exceptions.NotFoundException;
-import com.example.homeworkthree.model.Cart;
+import com.example.homeworkthree.models.Cart;
 
-public class CartService {
-    String createCartByPersonId(Integer id) throws NotFoundException;
+import java.util.List;
 
-    String addProductByProductIdAndCartId(Integer productId, Integer cartId) throws NotFoundException;
+public interface CartService {
 
-    String removeProductByProductIdAndCartId(Integer productId, Integer cartId) throws NotFoundException;
+    Cart createCartByPersonId(Integer id) throws NotFoundException;
 
-    void removeAllProductsFromCartById(Integer id) throws NotFoundException;
+    Cart addProductByProductIdAndCartId(Integer productId, Integer cartId) throws NotFoundException;
+
+    Cart removeProductByProductIdAndCartId(Integer productId, Integer cartId) throws NotFoundException;
+
+    void removeAllProductsFromCartById(Integer cartId) throws NotFoundException;
 
     List<Cart> getAllByPersonId(Integer id) throws NotFoundException;
 
     Cart getCartById(Integer id) throws NotFoundException;
 
-    String removeCartById(Integer id) throws NotFoundException;
-}
+    void removeCartById(Integer id) throws NotFoundException;
 }

@@ -1,7 +1,7 @@
 package com.example.homeworkthree.repositories;
 
 
-import com.example.homeworkthree.model.Cart;
+import com.example.homeworkthree.models.Cart;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
 
